@@ -1,0 +1,15 @@
+### Generated ###
+target/*
+log/*
+bin/*
+*.mvn
+*.svn
+*.DS_Store
+out/*
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+classes/*

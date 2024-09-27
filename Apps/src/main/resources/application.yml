@@ -1,0 +1,17 @@
+server:
+  port: 8100
+spring:
+  application:
+    name: app
+  datasource:
+    password: root
+    url: jdbc:postgresql://localhost:5432/grpc_app
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true

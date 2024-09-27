@@ -1,0 +1,22 @@
+syntax = "proto3";
+option java_package = "com.grpc.shop";
+
+service User{
+  rpc SideStreamingGetUser(ServerSideStreamingRequest) returns (stream APIResponse) {}
+  rpc Login(LoginRequest)  returns (APIResponse);
+  rpc Logout(Empty)  returns (APIResponse);
+}
+message LoginRequest{
+  string key = 1 ;
+}
+message ServerSideStreamingRequest {
+  string user_id = 1;
+}
+message APIResponse{
+  string response_message = 1;
+  int32  response_code  = 2;
+  string response_data = 3;
+}
+
+message Empty{
+}
